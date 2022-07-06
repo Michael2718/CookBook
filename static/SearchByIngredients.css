@@ -1,0 +1,47 @@
+.all-browsers2 {
+    margin-bottom: 200px;
+    margin-top: 20px;
+    padding: 5px;
+    background: lightgray;
+}
+.all-browsers3 {
+    margin-top: 50px;
+    padding: 5px;
+    background: lightgray;
+}
+.all-browsers2 > h1, .browser2 {
+  margin: 10px;
+  padding: 5px;
+}
+
+.all-browsers3 > h1, .browser3 {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser2 {
+    height: 30px;
+    width: 150px;
+    background: white;
+    float: left;
+    margin-left: 20px;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.browser3 {
+    height: 120px;
+    width: 150px;
+    background: white;
+    float: left;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.browser2 > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+.browser3 > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}

@@ -1,0 +1,65 @@
+.all-browsers {
+    margin-top: 20px;
+    padding: 5px;
+    background: lightgray;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+    height: 200px;
+    width: 200px;
+    background: white;
+    float: left;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.browser > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+.au{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #12d532;
+}
+.truncate p {
+    margin: 0;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.imgg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.butt{
+    margin-bottom: auto;
+    text-align: center;
+    padding: 8px 8px;
+    border:  0px;
+    color: #070404;
+    background: #ecca66;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    text-transform: uppercase;
+}
+.butt:hover {
+    border-radius: 10px;
+    color: #090908;
+    background: lightgray;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
