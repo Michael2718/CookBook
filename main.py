@@ -1,6 +1,6 @@
 import sqlite3
 
-database = sqlite3.connect("login_and_password.db")
+database = sqlite3.connect("database.db")
 cursor = database.cursor()
 
 cursor.execute("""CREATE TABLE IF NOT EXISTS users(
@@ -10,7 +10,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS users(
 
 database.commit()
 
-if input("Sign in or Sign up? " "1 \ 2: ") == "1":
+if input("Sign in or Sign up? " "1 or 2: ") == "1":
     login = input("Login: ")
 
     cursor.execute(f"SELECT login FROM users WHERE login = '{login}'")
@@ -19,9 +19,9 @@ if input("Sign in or Sign up? " "1 \ 2: ") == "1":
 
         cursor.execute(f"SELECT login, password FROM users WHERE login = '{login}'")
         if cursor.fetchone()[1] == password:
-            print("You are logged in! ") # вы вошли в систему
+            print("You are logged in! ")  # вы вошли в систему
         else:
-            print("Incorrect password") # неверный пароль
+            print("Incorrect password")  # неверный пароль
 
 else:
     inp_login = input("Login: ")
@@ -33,5 +33,4 @@ else:
 
         database.commit()
     else:
-        print("Such a login exists! ") #такой логин существует
-
+        print("Such a login exists! ")  # такой логин существует
