@@ -3,11 +3,11 @@
     <head>
         <link rel="stylesheet" href="../static/HeaderFooter.css">
         <link rel="stylesheet" href="../static/ElementsGrid.css">
+        <link rel="stylesheet" href="../static/SearchByIngredients.css">
         <meta charset="utf-8">
-        <title>General Search</title>
+        <title>Search By Ingredients</title>
     </head>
     <header>
-
         <div id="dh1"  style='float: left; clear: left;'>
             <a href="index.html" style="float:left;  margin-right:50px;"><img src="../static/Logo.png"></a>
             <a class="h" href="index.html">Home</a>
@@ -16,11 +16,13 @@
             <a class="h" href="SearchHistory.html">Search history</a>
             <a class="h" href="Favorites.html">Favorites</a>
         </div>
-        <div id="dh2"  style='float: right; clear: right;'>
+        <form id="dh2"  style='float: right; clear: right;'>
+            <input name="guruweba_example_text" type="text" class="username" placeholder="username"/>
+            <input name="guruweba_example_password" type="password" class="username" placeholder="password"/>
             <button class="flat">Log in</button>
             <button class="flat">Sign up</button>
-            <button class="flat"> Log out</button>
-        </div>
+            <button hidden class="flat"> Log out</button>
+        </form>
     </header>
 
     <div id="content">
@@ -28,7 +30,55 @@
             <input type="text" name=text" class="search" placeholder="Search here!">
             <input type="submit" name="submit" class="submit" value="Search">
         </form>
-        <div class="all-browsers">
+        <div class="all-browsers2">
+            <div id="dh2"  style='float: right; clear: right;'>
+                <button class="butt">Search Recipes</button>
+            </div>
+            <h1>Choosed Ingridients</h1>
+            <article class="browser2">
+                <div  style='float: right; clear: right;'>
+                    <input type="image" src="../static/Red.png" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+            <article class="browser2">
+                <div  style='float: right; clear: right;'>
+                    <input type="image" src="../static/Red.png" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+            <article class="browser2">
+                <div  style='float: right; clear: right;'>
+                    <input type="image" src="../static/Red.png" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+        </div>
+        <div class="all-browsers3">
+            <h1>Search result</h1>
+            <article class="browser3">
+                <img class="imgg" src="../static/Logo.png">
+                <div style='float: right; clear: right;'>
+                    <input type="image" src="../static/Green.jpg" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+            <article class="browser3">
+                <img class="imgg" src="../static/Logo.png">
+                <div style='float: right; clear: right;'>
+                    <input type="image" src="../static/Green.jpg" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+            <article class="browser3">
+                <img class="imgg" src="../static/Logo.png">
+                <div style='float: right; clear: right;'>
+                    <input type="image" src="../static/Green.jpg" />
+                </div>
+                <p>Microsoft Edge</p>
+            </article>
+        </div>
+        <div hidden class="all-browsers">
             <h1>Search result</h1>
             <article class="browser">
                 <img class="imgg" src="../static/Logo.png">

@@ -1,0 +1,15 @@
+.left {
+    position: absolute;
+    left: 20px;
+
+    top: 120px;
+    width: 12%;
+    background: lightgray;
+}
+.right {
+    position: absolute;
+    right: -20px;
+    top: 120px;
+    width: 88%;
+    background: lightgray;
+}

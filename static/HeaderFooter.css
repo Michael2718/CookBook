@@ -17,11 +17,12 @@ header {
     height: 50px;
 }
 .flat{
-
     margin-top: 8px;
+    margin-right: 1px;
+    margin-left: 1px;
     text-align: center;
-    padding: 8px 8px;
-    border: 0px ;
+    padding: 5px 5px;
+    border: 0;
     color: #070404;
     background: #ecca66;
     transition: all .3s linear;
@@ -61,13 +62,17 @@ input{
 .search {
     width: 75%;
 }
+.username {
+    width: 18%;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 8px;
+}
 .submit{
     width: 70px;
     background-color: #ecca66;
     color: #111010;
 }
-
-
 
 a.h {
     color:white;
@@ -83,5 +88,5 @@ a.h {
 }
 
 #dh2 {
-    padding-right: 20px;
+    padding-right: 10px;
 }

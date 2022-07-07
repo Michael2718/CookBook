@@ -1,0 +1,13 @@
+#content2 {
+    background-color: #fcfbfb;
+    flex: 1;
+    padding: 20px;
+}
+p{
+    font-size: 20px;
+}
+.center2 {
+    text-align: center;
+    width: 50%;
+    margin:auto;
+}
