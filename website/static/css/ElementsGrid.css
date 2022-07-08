@@ -21,6 +21,7 @@
     margin: 4px;
     font-size: 90%;
 }
+
 .au{
     font-size: 20px;
     text-decoration: none;
@@ -36,11 +37,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 .imgg{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
 .butt{
     margin-top: 24px;

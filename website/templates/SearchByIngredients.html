@@ -1,136 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="../static/css/HeaderFooter.css">
-        <link rel="stylesheet" href="../static/css/ElementsGrid.css">
-        <link rel="stylesheet" href="../static/css/SearchByIngredients.css">
-        <meta charset="utf-8">
-        <title>Search By Ingredients</title>
-    </head>
-    <header>
-        <div id="dh1"  style='float: left; clear: left;'>
-            <a href="index.html" style="float:left;  margin-right:50px;"><img src="../static/images/Logo.png"></a>
-            <a class="h" href="index.html">Home</a>
-            <a class="h" href="GeneralSearch.html">General search</a>
-            <a class="h" href="SearchByIngredients.html">Search by ingredients</a>
-            <a class="h" href="SearchHistory.html">Search history</a>
-            <a class="h" href="Favorites.html">Favorites</a>
-        </div>
-        <form id="dh2"  style='float: right; clear: right;'>
-            <input name="guruweba_example_text" type="text" class="username" placeholder="username"/>
-            <input name="guruweba_example_password" type="password" class="username" placeholder="password"/>
-            <button class="flat">Log in</button>
-            <button class="flat">Sign up</button>
-            <button hidden class="flat"> Log out</button>
-        </form>
-    </header>
+{% extends "Base.html" %}
 
-    <div id="content">
-        <form>
-            <input type="text" name=text" class="search" placeholder="Search here!">
-            <input type="submit" name="submit" class="submit" value="Search">
-        </form>
-        <div class="all-browsers2">
-            <div id="dh2"  style='float: right; clear: right;'>
-                <button class="butt">Search Recipes</button>
-            </div>
-            <h1>Choosed Ingridients</h1>
-            <article class="browser2">
-                <div  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Red.png" />
-                </div>
-                <p>Microsoft Edge</p>
-            </article>
-            <article class="browser2">
-                <div  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Red.png" />
-                </div>
-                <p>Microsoft Edge</p>
-            </article>
-            <article class="browser2">
-                <div  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Red.png" />
-                </div>
-                <p>Microsoft Edge</p>
-            </article>
+{% block title %}Search By Ingredients{% endblock %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="../static/css/SearchByIngredients.css">
+    <link rel="stylesheet" href="../static/css/ElementsGrid.css">
+{% endblock %}
+{% block div %}
+<div id="content">
+    <form method="post">
+        <input type="text" name="query" class="search" placeholder="Search here!">
+        <input type="submit" name="submit" class="submit" value="Search">
+    </form>
+
+{#    <div class="all-browsers2">
+        <div id="dh2"  style='float: right; clear: right;'>
+            <button class="butt">Search Recipes</button>
         </div>
-        <div class="all-browsers3">
-            <h1>Search result</h1>
+        <h1>Chosen Ingredients</h1>
+        {% for ingredient in ingredients %}
+            <article class="browser2">
+                <img class="imgg" src="https://spoonacular.com/cdn/ingredients_100x100/{{ ingredient }}.png">
+                <div  style='float: right; clear: right;'>
+                    <input type="image" src="../static/images/Red.png"/>
+                </div>
+                <p>{{ ingredient }}</p>
+            </article>
+        {% endfor %}
+    </div>#}
+
+    <div class="all-browsers3">
+        <h1>Chosen Ingredients</h1>
+        {% for ingredient in ingredients %}
             <article class="browser3">
-                <img class="imgg" src="../static/images/Logo.png">
+                <img class="imgg" src="https://spoonacular.com/cdn/ingredients_100x100/{{ ingredient }}">
                 <div style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Green.jpg" />
+{#                    <form method="post">#}
+{#                        <input type="image" class="submit" name="new_ingredient" value="{{ ingredient['name'] }}" src="../static/images/Green.jpg" />#}
+{#                    </form>#}
                 </div>
-                <p>Microsoft Edge</p>
+                <p>{{ ingredient}}</p>
             </article>
-            <article class="browser3">
-                <img class="imgg" src="../static/images/Logo.png">
-                <div style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Green.jpg" />
-                </div>
-                <p>Microsoft Edge</p>
-            </article>
-            <article class="browser3">
-                <img class="imgg" src="../static/images/Logo.png">
-                <div style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/Green.jpg" />
-                </div>
-                <p>Microsoft Edge</p>
-            </article>
-        </div>
-        <div hidden class="all-browsers">
-            <h1>Search result</h1>
-            <article class="browser">
-                <img class="imgg" src="../static/images/Logo.png">
-                <a href="#" class="au">Microsoft Edge</a>
-                <div id="dh2"  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/EmptyStar.png" />
-                </div>
-                <div class="truncate">
-                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-                </div>
-            </article>
-            <article class="browser">
-                <img class="imgg" src="../static/images/Logo.png">
-                <a href="#" class="au">Microsoft Edge</a>
-                <div id="dh2"  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/EmptyStar.png" />
-                </div>
-                <div class="truncate">
-                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-                </div>
-            </article>
-            <article class="browser">
-                <img class="imgg" src="../static/images/Logo.png">
-                <a href="#" class="au">Microsoft Edge</a>
-                <div id="dh2"  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/EmptyStar.png" />
-                </div>
-                <div class="truncate">
-                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-                </div>
-            </article>
-            <article class="browser">
-                <img class="imgg" src="../static/images/Logo.png">
-                <a href="#" class="au">Microsoft Edge</a>
-                <div id="dh2"  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/EmptyStar.png" />
-                </div>
-                <div class="truncate">
-                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-                </div>
-            </article>
-            <article class="browser">
-                <img class="imgg" src="../static/images/Logo.png">
-                <a href="#" class="au">Microsoft Edge</a>
-                <div id="dh2"  style='float: right; clear: right;'>
-                    <input type="image" src="../static/images/EmptyStar.png" />
-                </div>
-                <div class="truncate">
-                    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-                </div>
-            </article>
-        </div>
+        {% endfor %}
     </div>
-    <footer id="footer">Copyright © 2022 <a href="https://github.com/Michael2718/CookBook" style="color: rgb(23,21,21);"><strong>Misha and Co</strong></a></footer>
-</html>
+
+    <div class="all-browsers">
+        <h1>Search result</h1>
+        {% for recipe in recipes %}
+        <article class="browser">
+            <img class="imgg" src="{{ recipe['image'] }}">
+            <a href="/{{ recipe['id'] }}" class="au">{{ recipe['title'] }}</a>
+            <div id="dh2"  style='float: right; clear: right;'>
+                <input type="image" src="../static/images/EmptyStar.png" />
+            </div>
+            <div class="truncate">
+{#                <p>{{ recipes_info['summary'][:recipe['summary'].index('.')]|safe }}</p>#}
+                <p>Recipe Info</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

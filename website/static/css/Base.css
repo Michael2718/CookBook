@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+.topnav {
+    overflow: hidden;
+    /*background-color: #eeeeee;*/
+    background-color: #282A35;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: #282A35;
+}
+
+.topnav .auth-container input {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 18px;
+    color: #282A35;
+    border: none;
+    width: 150px;
+}
+
+.topnav .auth-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ffffff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .auth-container button:hover {
+  background: #ccc;
+}
+
+#content {
+    background-color: #fffffe;
+    flex: 1;
+    padding: 16px;
+}
+
+#footer {
+    text-align: center;
+    color: white;
+    background-color: #282A35;
+    padding: 16px;
+}
+
+#footer a {
+    color: white;
+}

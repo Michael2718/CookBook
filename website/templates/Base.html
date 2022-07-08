@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="../static/css/Base.css">
+    {% block stylesheet %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/general-search">General search</a>
+        <a href="/search-by-ingredients">Search by ingredients</a>
+        <a href="/search-history">Search history</a>
+        <a href="/favorites">Favorites</a>
+        <div class="auth-container">
+            <form>
+                <button type="button">Sign up</button>
+                <button type="button">Log in</button>
+                <button hidden type="button"> Log out</button>
+                <input type="password" class="password" placeholder="password"/>
+                <input type="text" class="username" placeholder="username"/>
+            </form>
+        </div>
+    </div>
+
+
+    {% block div %}
+    {% endblock %}
+
+    <div class="footer">
+        <footer id="footer">
+            Copyright © 2022
+            <a href="https://github.com/Michael2718/CookBook"><strong>Team 1.3</strong>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
