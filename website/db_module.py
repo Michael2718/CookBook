@@ -48,9 +48,8 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS users(
 
 database.commit()
 
-if input("Sign in or Sign up? " "1 or 2: ") == "1":
-    login = input("Login: ")
 
+def login(login, password):
     cursor.execute(f"SELECT login FROM users WHERE login = '{login}'")
     if not cursor.fetchone() is None:
         password = input("Password: ")
@@ -61,14 +60,14 @@ if input("Sign in or Sign up? " "1 or 2: ") == "1":
         else:
             print("Incorrect password")  # неверный пароль
 
+
+inp_login = input("Login: ")
+inp_password = input("Password: ")
+
+cursor.execute(f"SELECT login FROM users WHERE login = '{inp_login}'")
+if cursor.fetchone() is None:
+    cursor.execute("INSERT INTO users VALUES (?, ?)", (inp_login, inp_password))
+
+    database.commit()
 else:
-    inp_login = input("Login: ")
-    inp_password = input("Password: ")
-
-    cursor.execute(f"SELECT login FROM users WHERE login = '{inp_login}'")
-    if cursor.fetchone() is None:
-        cursor.execute("INSERT INTO users VALUES (?, ?)", (inp_login, inp_password))
-
-        database.commit()
-    else:
-        print("Such a login exists! ")  # такой логин существует
+    print("Such a login exists! ")  # такой логин существует

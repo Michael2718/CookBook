@@ -9,8 +9,10 @@
     <div class="h" style="display:inline-block;position: relative">
         <img itemprop="image" src="{{ recipe['image'] }}" alt="Recipe image &amp; Recipe image" title="Recipe image &amp; Recipe image">
     </div>
-    <input type="image" src="../static/images/Star.jpg" width="54" height="54"/>
-
+{#    <input type="image" src="../static/images/Download.png" width="54" height="54"/>#}
+    <a href="{{ card }}">
+        <img src="../static/images/Download.png" alt="download recipe card" style="width:54px;height:54px">
+    </a>
     <h2>Description</h2>
 
     <p class="h" itemprop="description">

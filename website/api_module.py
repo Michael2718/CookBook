@@ -1,4 +1,4 @@
-import spoonacular
+import spoonacular, requests
 
 
 class API:
@@ -20,3 +20,8 @@ class API:
 
     def get_instruction(self, id):
         return self.api.get_analyzed_recipe_instructions(id, False).json()
+
+    def get_card(self, id):
+        url = f"https://api.spoonacular.com/recipes/{id}/card?apiKey={self.api.api_key}"
+        response = requests.get(url)
+        return response.json()['url']

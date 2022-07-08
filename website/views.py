@@ -1,13 +1,13 @@
 from flask import Blueprint, render_template, request
 import api_module
 
+
+# CONFIG
 API_KEY = open("../api_key", 'r').read()
 
 api = api_module.API(API_KEY)
 
 views = Blueprint('views', __name__)
-
-# ingredients = ["egg", "milk", "raw-bacon", "cheddar-cheese"]
 
 
 @views.route('/')
@@ -19,7 +19,8 @@ def home():
 def show_recipe(id):
     recipe = api.recipe_info(id)
     instruction = api.get_instruction(id)
-    return render_template("RecipePage.html", recipe=recipe, instruction=instruction)
+    card = api.get_card(id)
+    return render_template("RecipePage.html", recipe=recipe, instruction=instruction, card=card)
 
 
 @views.route('/general-search', methods=['POST', 'GET'])
